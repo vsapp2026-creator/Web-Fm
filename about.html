@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web FM - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo-600
+                        secondary: '#db2777', // Pink-600
+                        surface: '#ffffff',
+                        background: '#f8fafc', // Slate-50
+                        text: '#0f172a', // Slate-900
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-gradient-to-br from-purple-50 via-pink-50 to-cyan-50 text-text font-sans min-h-screen flex flex-col relative overflow-hidden">
+
+    <!-- Navigation -->
+    <nav
+        class="relative z-50 w-full px-6 py-4 flex justify-between items-center backdrop-blur-md bg-white/60 border-b border-purple-200/50 sticky top-0 shadow-sm">
+        <a href="index.html"
+            class="text-3xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent hover:scale-105 transition-transform duration-300">
+            Web FM
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html"
+                class="nav-link text-slate-500 font-medium hover:text-primary transition-colors relative group">
+                Home
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="tv.html"
+                class="nav-link text-slate-500 font-medium hover:text-primary transition-colors relative group">
+                TV
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="about.html"
+                class="nav-link active text-slate-900 font-semibold hover:text-primary transition-colors relative group">
+                About
+                <span
+                    class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-100 transition-transform origin-left"></span>
+            </a>
+        </div>
+
+        <button id="mobile-menu-btn"
+            class="md:hidden text-slate-800 text-2xl focus:outline-none hover:text-primary transition-colors">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8 shadow-2xl">
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-slate-800 text-3xl hover:rotate-90 transition-transform">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="text-3xl font-bold text-slate-500 hover:text-primary transition-colors">Home</a>
+        <a href="tv.html" class="text-3xl font-bold text-slate-500 hover:text-primary transition-colors">TV</a>
+        <a href="about.html" class="text-3xl font-bold text-slate-900 hover:text-primary transition-colors">About</a>
+    </div>
+
+    <!-- Content -->
+    <main class="flex-grow container mx-auto px-4 py-16 text-center max-w-4xl">
+
+        <div class="mb-12 animate-fade-in-up">
+            <div
+                class="w-32 h-32 md:w-48 md:h-48 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 shadow-2xl animate-bounce-slow shadow-primary/30">
+                <i class="fas fa-microphone-alt text-5xl md:text-7xl text-white"></i>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-slate-900">Experience <span
+                    class="text-primary">Live</span> Music</h1>
+            <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8">
+                Web FM is your premier destination for non-stop music, entertainment, and live shows. Streaming 24/7, we
+                bring the beat directly to you, tailored for the modern listener.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-primary">
+                        <i class="fas fa-headphones-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900">High Quality</h3>
+                    <p class="text-sm text-slate-500">Crystal clear sound for an immersive experience.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 delay-100">
+                    <div
+                        class="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 text-secondary">
+                        <i class="fas fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900">Global Reach</h3>
+                    <p class="text-sm text-slate-500">Listen from anywhere in the world, anytime.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl hover:-translate-y-2 transition-transform duration-300 delay-200">
+                    <div
+                        class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 text-purple-600">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-900">Mobile First</h3>
+                    <p class="text-sm text-slate-500">Seamless experience on all your devices.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Popup Modal -->
+    <div id="about-popup"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div
+            class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary"></div>
+            <button id="close-popup"
+                class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 transition-colors">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <div
+                class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/30">
+                <i class="fas fa-award text-3xl text-white"></i>
+            </div>
+
+            <h3 class="text-2xl font-bold text-slate-900 mb-2">VS ENTERTAINMENT</h3>
+            <p class="text-slate-500 font-medium mb-6">Founded in 2009</p>
+
+            <div class="bg-slate-50 rounded-xl p-4 mb-4 border border-slate-100">
+                <p class="text-slate-700 leading-relaxed font-medium">
+                    Operates the <span class="font-bold text-primary">© Web FM</span> service. <br> Join us.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 mb-6 border border-purple-100">
+                <p class="text-slate-600 text-sm font-medium">
+                    <i class="fas fa-code text-primary mr-2"></i>
+                    Developed by <span class="font-bold text-primary">© VS WebSystem</span>
+                </p>
+            </div>
+
+            <button id="popup-cta"
+                class="w-full py-3 bg-gradient-to-r from-primary via-secondary to-accent text-white rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Mini Floating Player -->
+    <div id="mini-player"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] bg-white/90 backdrop-blur-xl border border-slate-200 rounded-full px-6 py-4 shadow-[0_10px_40px_rgba(0,0,0,0.15)] flex items-center gap-4 transition-all duration-300 hover:shadow-[0_10px_50px_rgba(79,70,229,0.25)] hover:scale-105">
+
+        <!-- Status Indicator -->
+        <div class="flex items-center gap-2">
+            <span id="mini-status-dot" class="w-2 h-2 bg-red-500 rounded-full"></span>
+            <span class="text-xs font-bold text-slate-600">Web FM</span>
+        </div>
+
+        <!-- Play/Pause Button -->
+        <button id="mini-play-btn"
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all active:scale-95">
+            <i class="fas fa-play pl-1 text-lg"></i>
+        </button>
+
+        <!-- Volume Control -->
+        <div class="flex items-center gap-2">
+            <i class="fas fa-volume-up text-slate-400 text-sm"></i>
+            <input type="range" id="mini-volume" min="0" max="1" step="0.01" value="0.8"
+                class="w-20 h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary">
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audio-player" preload="none">
+        <source src="https://stream.zeno.fm/xg08hgda5qytv" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Footer -->
+    <footer
+        class="relative z-10 w-full py-8 text-center text-slate-400 text-sm border-t border-gray-200 mt-auto bg-white/50 backdrop-blur-sm">
+        <p class="font-medium">© 2026 VS ENTERTAINMENT.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
